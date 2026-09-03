@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "helvetica";
+	src: url("../../assets/webfonts/Helvetica.ttf") format("opentype");
+}
+
+:root {
+    --theme: #c23788;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'helvetica', sans-serif !important;
+}
+
+
+.container {
+    max-width: 1290px;
+}
+
+body {
+    background: #F1F1F1;
+}

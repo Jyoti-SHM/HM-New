@@ -1,0 +1,83 @@
+.marquee {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 50px;
+  margin-top: 100px;
+
+  &.slide-right {
+    transform: scaleX(-1);
+
+    .text,
+    .stroke-text {
+      transform: scaleX(-1);
+    }
+  }
+
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .text {
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -5%;
+        color: $header-color;
+        @include flex;
+        gap: 50px;
+        @include transition;
+        text-transform: uppercase;
+        font-family: $heading-font;
+
+         @include breakpoint (max-xl){
+           letter-spacing: initial;
+        }
+
+
+        @include breakpoint (max-md){
+            font-size: 60px;
+        }
+
+         @include breakpoint (max-sm){
+            font-size: 50px;
+        }
+
+       .marque-dot {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background: $header-color;
+            position: relative;
+            top: -10px;
+       }
+  }
+}
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.team-banner {
+    margin-top: 35px;
+    
+    img {
+        @include imgw;
+    }
+}

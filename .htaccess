@@ -1,0 +1,72 @@
+RewriteEngine On
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove index.html from URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index\.html [NC]
+RewriteRule ^ %1/ [R=301,L]
+
+# Add .html extension to URL (if file exists)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
+
+ErrorDocument 404 /404.html
+
+
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule .* https://hospitalityminds.com%{REQUEST_URI} [R=301,L]
+Redirect 301 /search-engine-optimization.html /seo-marketing-company-for-hotels-in-india.html
+Redirect 301 /www.googletagmanager.com/gtm5445.html?id= /hospitalityminds.com/
+# Redirect 301 /landing-page/company-profile/www.hospitalityminds.com /hospitalityminds.com/
+Redirect 301 /hotel-audit.html /hotel-audit-company-in-india.html
+# Redirect 301 /index.php /hospitalityminds.com/
+Redirect 301 /video-editing.html /video-editing-company-in-india.html
+Redirect 301 /hotel-marketing-comapany-usa.html /hotel-marketing-company-usa.html
+Redirect 301 /hotel-marketing-comapany-uae.html /hotel-marketing-company-uae.html
+Redirect 301 /hotel-marketing-comapany-uae /hotel-marketing-company-uae.html
+Redirect 301 /importance-having-a-hotels-resorts-website /importance-having-a-hotels-resorts-website.html
+Redirect 301 /4-hacks-soical-media-hotel-marketing /4-hacks-soical-media-hotel-marketing.html
+Redirect 301 /how-local-seo-boost-hotel-business-2023 /how-local-seo-boost-hotel-business-2023.html
+Redirect 301 /5-effective-factors-influencer-marketing-hotels /5-effective-factors-influencer-marketing-hotels.html
+Redirect 301 /increase-hotel-booking-through-google-ads /increase-hotel-booking-through-google-ads.html
+Redirect 301 /major-ota-platform-need-list-for-your-hotel-growth /major-ota-platform-need-list-for-your-hotel-growth.html
+Redirect 301 /www.googletagmanager.com/gtm5445.html?id /hospitalityminds.com/
+Redirect 301 /website-development.html /website-development-company-for-hotels-in-india.html
+Redirect 301 /pre-launch-marketing.html /pre-launch-marketing-company-for-hotels-and-resorts-in-india.html
+Redirect 301 /international-hotels.html /international-hotels-marketing-company.html
+Redirect 301 /sales-support.html /sales-support-service-for-hotels-in-india.html
+Redirect 301 /international-hotels /international-hotels-marketing-company.html
+Redirect 301 /channel-manager.html /channel-manager-for-hotels-in-india.html
+Redirect 301 /sales-support /sales-support-service-for-hotels-in-india.html
+Redirect 301 /influencer-marketing.html /influencer-marketing-company-for-hotels-and-resorts-in-india.html
+Redirect 301 /hotel-photography.html /best-hotels-and-resorts-photography-company-in-india.html
+Redirect 301 /best-hotels-and-resorts-photography-company.html /best-hotels-and-resorts-photography-company-in-india.html
+Redirect 301 /social-media-marketing.html /best-social-media-marketing-company-for-hotel-in-india.html
+Redirect 301 /blog/forecasting.html /blogs.html
+Redirect 301 /revenuemanagement.html /hotel-revenue-management-company-in-india.html
+Redirect 301 /socialmedia.html /best-social-media-marketing-company-for-hotel-in-india.html
+Redirect 301 /hotel-audit.html /hotel-audit-company-in-india.html
+Redirect 301 /hotel-marketing-comapany-uae /marketing-company-for-hotels-dubai.html
+Redirect 301 /hotel-marketing-comapany-uae.html /marketing-company-for-hotels-dubai.html
+Redirect 301 /hotel-marketing-comapany-usa.html /hotel-marketing-company-usa.html
+Redirect 301 /hospitalityminds.com/ /hospitalityminds.com
+Redirect 301 /revenuemanagement.html /hotel-revenue-management-company-in-india.html
+Redirect 301 /search-engine-optimization.html /seo-marketing-company-for-hotels-in-india.html
+Redirect 301 /video-editing.html /video-editing-company-in-india.html
+Redirect 301 /hotel-marketing-comapany-uae.html /hotel-marketing-company-uae.html
+Redirect 301 /jobs/contact-us.html /openings.html
+Redirect 301 /jobs/our-client.html /openings.html
+Redirect 301 /jobs/blogs.html /openings.html
+Redirect 301 /jobs/digital-marketing-company-in-india.html /
+Redirect 301 /jobs/best-social-media-marketing-company-for-hotel-in-india.html /openings.html
+Redirect 301 /jobs/website-development-company-for-hotels-in-india.html /openings.html
+Redirect 301 /jobs/case-study.html /openings.html
+Redirect 301 /jobs/channel-manager-for-hotels-in-india.html /openings.html
+Redirect 301 /jobs/terms-condition.html /openings.html
+Redirect 301 /jobs/policy.html /openings.html
+Redirect 301 /blogs/blogs.html /blogs.html
+Redirect 301 /landing-page/company-profile/LP.html /landing-page/LP.html
+

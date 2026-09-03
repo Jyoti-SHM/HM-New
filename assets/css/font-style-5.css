@@ -1,0 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/bdo-grotesk');
+
+:root {
+    --theme: #893EFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'BDO Grotesk', sans-serif !important;
+}
+
+.theme-btn {
+    background: #893EFF !important;
+}
+
+.theme-btn-arrow-right {
+    background: #893EFF !important;
+}
+
+.theme-btn-arrow-left {
+    background: #893EFF !important;
+}

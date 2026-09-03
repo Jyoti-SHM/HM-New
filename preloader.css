@@ -1,0 +1,30 @@
+.preloader {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.preloader {
+    text-align: center;
+}
+
+.preloader img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+    /* Adjust preloader styles for smaller screens */
+    .preloader img {
+        max-width: 100%;
+    }
+}

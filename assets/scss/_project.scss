@@ -1,0 +1,1796 @@
+.project-section {
+    .section-title {
+        display: flex;
+        gap: 350px;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        padding-top: 50px;
+
+        @include breakpoint (max-lg){
+            gap: 0;
+            justify-content: center;
+            display: grid;
+            text-align: center;
+        }
+    }
+}
+
+.project-card-items {
+    margin-top: 100px;
+    max-width: 750px;
+
+    @include breakpoint (max-lg){
+        margin-top: 30px;
+    }
+
+    .thumb {
+        position: relative;
+        overflow: hidden;
+        
+        @include breakpoint (max-lg){
+           height: 500px;
+        }
+
+        @include breakpoint (max-sm){
+           height: 400px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        @include flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+         @include breakpoint (max-lg){
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        p {
+            text-transform: uppercase;
+        }
+
+        .title {
+            @include breakpoint (max-xxl){
+                font-size: 24px;
+            }
+
+             @include breakpoint (max-lg){
+                font-size: 20px;
+            }
+
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        max-width: 575px;
+        margin-left: auto;
+        margin-top: 350px;
+
+        @include breakpoint (max-xl){
+           margin-top: 100px;
+        }
+
+        @include breakpoint (max-lg){
+            margin-top: 30px;
+            max-width: initial;
+        }
+    }
+
+    &.style-3 {
+        margin: 0 auto;
+        margin-top: 100px;
+
+        .thumb {
+            @include breakpoint (max-xl){
+            height: 600px;
+            }
+        }
+
+        @include breakpoint (max-lg){
+            margin-top: 30px;
+            max-width: initial;
+        }
+    }
+
+    &.style-4 {
+        max-width: 575px;
+
+         @include breakpoint (max-lg){
+            margin-top: 30px;
+            max-width: initial;
+        }
+    }
+}
+
+.project-content-box {
+    max-width: 365px;
+
+    @include breakpoint (max-md){
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .project-btn {
+        display: flex;
+        width: 170px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 170px;
+        font-size: 16px;
+        color: $header-color;
+        font-weight: 500;
+        font-family: $body-font;
+        background: transparent;
+        text-align: center;
+        border-radius: 50%;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        z-index: 9;
+        border: 1px solid rgba(17, 17, 17, 0.2);
+        margin-top: 70px;
+        margin-bottom: 20px;
+
+         @include breakpoint (max-md){
+            margin: 20px auto;
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            @include transition;
+            z-index: -1;
+        }
+
+        span {
+            display: block;
+        }
+
+        &:hover {
+            color: $white;
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                background-color: $theme-color;
+            }
+        }
+    }
+
+    .wt-hover-btn-item {
+        position: relative;
+        transition: transform 0.2s ease-out;
+        will-change: transform;
+    }
+}
+
+
+.project-wrapper-two {
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
+    padding-top: 47px;
+
+    .section-title {
+        display: flex;
+        gap: 245px;
+
+        @include breakpoint (max-lg){
+            gap: 5px;
+            justify-content: center;
+            text-align: center;
+            display: grid;
+        }
+
+        .sub-title {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.project-box-items-two {
+    .thumb {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-top: 40px;
+
+        @include breakpoint (max-md){
+            height: 480px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img {
+            @include imgw;
+            object-fit: cover;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            object-fit: cover;
+            transition: all 1s;
+            border-radius: 15px;
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+
+        .title {
+            @include breakpoint (max-lg){
+                font-size: 22px;
+            }
+            a {
+                &:hover {
+                    color: $theme-color-2;
+                }
+            }
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 4px;
+        }
+    }
+
+    &:hover {
+        .thumb {
+            &:after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+            
+            img {
+                 transform: scale(1.2);
+            }
+        }
+    }
+
+    &.style-two {
+        max-width: 590px;
+        margin-left: auto;
+        margin-top: 220px;
+
+        @include breakpoint (max-xxl){
+            margin-top: 100px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+            max-width: initial;
+            margin-left: initial;
+        }
+    }
+
+    &.style-three {
+        max-width: 515px;
+        margin-left: auto;
+        margin-top: 200px;
+
+         @include breakpoint (max-xxl){
+            margin-top: 100px;
+        }
+
+         @include breakpoint (max-md){
+            margin-top: 30px;
+            max-width: initial;
+            margin-left: initial;
+        }
+    }
+
+    &.style-four {
+        max-width: 630px;
+        margin-left: auto;
+        margin-top: 320px;
+
+         @include breakpoint (max-xxl){
+            margin-top: 100px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+            max-width: initial;
+            margin-left: initial;
+        }
+    }
+
+    &.style-five {
+        margin-top: 200px;
+
+         @include breakpoint (max-xxl){
+            margin-top: 100px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+            max-width: initial;
+            margin-left: initial;
+        }
+    }
+
+    &.style-six {
+        max-width: 515px;
+        margin-top: 420px;
+
+         @include breakpoint (max-xxl){
+            margin-top: 200px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+            max-width: initial;
+            margin-left: initial;
+        }
+    }
+
+    &.style-seven {
+        margin-left: auto;
+        max-width: 315px;
+        margin-top: 320px;
+
+         @include breakpoint (max-xxl){
+            margin-top: 100px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+            max-width: initial;
+            margin-left: initial;
+        }
+    }
+}
+
+.project-section-three {
+    .section-title {
+         @include breakpoint (max-lg){
+           margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 240px;
+
+             @include breakpoint (max-md){
+                font-size: 150px;
+            }
+
+            @include breakpoint (max-sm){
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+.project-image-three {
+    max-width: 315px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+
+    @include breakpoint (max-lg){
+        max-width: initial;
+    }
+
+    .content {
+        background: #FFBD7A;
+        border-radius: 0px 10px 10px 0px;
+        padding: 20px 20px;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        transform: translateX(-100px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s ease-in-out;
+
+        .title {
+
+             @include breakpoint (max-xxl){
+                font-size: 24px;
+            }
+
+            @include breakpoint (max-xl){
+                font-size: 22px;
+            }
+           
+            a {
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+
+                &:hover {
+                    color: $header-color;
+                    background-size: 100% 2px;
+                    background-image: linear-gradient(180deg, $header-color 0%, $header-color 100%);
+                }
+            }
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $header-color;
+            margin-top: 4px;
+        }
+    }
+
+    img {
+        @include imgw;
+        border-radius: 15px;
+    }
+
+    &:hover {
+        .content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px);
+        }
+    }
+
+    &.style-2 {
+        max-width: 515px;
+        margin-left: auto;
+        margin-top: 150px;
+
+        @include breakpoint (max-xl){
+            margin-top: 100px;
+        }
+
+        @include breakpoint (max-lg){
+            max-width: initial;
+            margin-left: initial;
+            margin-right: initial;
+            margin-top: 30px;
+        }
+
+    }
+
+     &.style-3 {
+        max-width: 515px;
+        margin-left: 165px;
+        margin-top: 250px;
+
+        @include breakpoint (max-xl){
+            margin-top: 150px;
+        }
+
+        @include breakpoint (max-lg){
+            max-width: initial;
+            margin-left: initial;
+            margin-right: initial;
+            margin-top: 30px;
+        }
+    }
+
+     &.style-4 {
+        max-width: 490px;
+        margin-left: auto;
+        margin-top: 300px;
+        margin-right: 100px;
+
+        @include breakpoint (max-xl){
+            margin-top: 200px;
+        }
+
+         @include breakpoint (max-lg){
+            max-width: initial;
+            margin-left: initial;
+            margin-right: initial;
+            margin-top: 30px;
+        }
+    }
+
+    &.style-5 {
+        max-width: 515px;
+        margin-top: 250px;
+
+        @include breakpoint (max-xl){
+            margin-top: 100px;
+        }
+
+         @include breakpoint (max-lg){
+            max-width: initial;
+            margin-left: initial;
+            margin-right: initial;
+            margin-top: 30px;
+        }
+    }
+
+    &.style-6 {
+        max-width: 515px;
+        margin-left: auto;
+        margin-top: 480px;
+
+        @include breakpoint (max-xl){
+            margin-top: 220px;
+        }
+
+         @include breakpoint (max-lg){
+            max-width: initial;
+            margin-left: initial;
+            margin-right: initial;
+            margin-top: 30px;
+        }
+    }
+
+    &.style-7 {
+        max-width: 315px;
+        margin-left: auto;
+        margin-top: 270px;
+
+        @include breakpoint (max-xl){
+            margin-top: 150px;
+        }
+
+         @include breakpoint (max-lg){
+            max-width: initial;
+            margin-left: initial;
+            margin-right: initial;
+            margin-top: 30px;
+        }
+    }
+}
+
+.project-box-items-5 {
+    .project-thumb {
+        position: relative;
+        @include transition;
+        overflow: hidden;
+         border-radius: 15px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 15px;
+            @include transition;
+            object-fit: cover;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            object-fit: cover;
+            transition: all 1s;
+        }
+
+        .top-shape {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        .bottom-shape {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        .left-shape {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        .right-shape {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+    }
+
+    .title {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'BDO Grotesk', sans-serif !important;
+        max-width: 330px;
+        line-height: 130%;
+        letter-spacing: -0.05em;
+
+        @include breakpoint (max-lg){
+            letter-spacing: initial;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        a {
+            background-position: 0 95%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            display: inline;
+            
+            &:hover {
+                color: $theme-color;
+                background-size: 100% 2px;
+                background-image: linear-gradient(180deg, $theme-color 0%, $theme-color 100%);
+            }
+        }
+    }
+
+    .title-2 {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'BDO Grotesk', sans-serif !important;
+        max-width: 330px;
+        line-height: 130%;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+
+        @include breakpoint (max-lg){
+            letter-spacing: initial;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        a {
+            background-position: 0 95%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            display: inline;
+            
+            &:hover {
+                color: $theme-color;
+                background-size: 100% 2px;
+                background-image: linear-gradient(180deg, $theme-color 0%, $theme-color 100%);
+            }
+        }
+    }
+
+    &:hover {
+        .project-thumb {
+             &::after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &.active {
+        .project-thumb {
+            .top-shape {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .bottom-shape {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .left-shape {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .right-shape {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.project-section-6 {
+    margin-top: 50px;
+
+    .section-title {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 20px;
+            letter-spacing: -5%;
+            font-size: 160px;
+            font-weight: 500;
+            line-height: 1;
+
+             @include breakpoint (max-xxxl){
+                font-size: 80px;
+            }
+
+
+            @include breakpoint (max-lg){
+                font-size: 88px;
+            }
+
+            @include breakpoint (max-sm){
+                font-size: 45px;
+            }
+
+            span {
+                font-style: italic;
+            }
+        }
+
+        p {
+            max-width: 360px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #555555;
+            margin: 0 auto;
+             font-family: 'BDO Grotesk', sans-serif !important;
+
+             @include breakpoint (max-sm){
+                font-size: 16px;
+            }
+        }
+    }
+
+    .project-btn {
+        height: 70px;
+        line-height: 70px;
+        border: 1px solid $header-color;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 34px;
+        display: inline-block;
+        border-radius: 35px;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            background-color: $header-color;
+            color: $white;
+        }
+    }
+}
+
+.proejct-image-style-6 {
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 610px;
+
+    @include breakpoint (max-xl){
+        height: 500px;
+    }
+
+    img {
+        @include imgw;
+        transition: all 0.5s ease;
+        object-fit: cover;
+    }
+
+    .project-6 {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        right: 20px;
+        max-width: 645px;
+        margin: 0 auto;
+        text-align: center;
+
+        // Default Hidden
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(calc(-50% + 40px));
+        transition: all 0.5s ease;
+        z-index: 2;
+
+        @include breakpoint (max-xxxl){
+            max-width: 500px;
+        }
+
+        @include breakpoint (max-xxl){
+            max-width: 300px;
+        }
+
+         @include breakpoint (max-md){
+            max-width: 400px;
+        }
+
+        .thumb {
+            transform: scale(.9);
+            transition: all 0.5s ease;
+
+            img {
+                @include imgw;
+            }
+        }
+
+        .title {
+            background: $white;
+            padding: 20px;
+            font-size: 15px;
+            font-weight: 500;
+            max-width: 280px;
+            margin: 0 auto;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+
+            @include breakpoint (max-xxl){
+                max-width: 200px;
+            }
+
+            a {
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+
+                &:hover {
+                    color: $header-color;
+                    background-size: 100% 1.2px;
+                    background-image: linear-gradient(180deg, $header-color 0%, $header-color 100%);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+
+        .project-6 {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%);
+
+            .thumb {
+                transform: scale(1);
+            }
+
+            .title {
+                transform: translateY(7px);
+            }
+        }
+    }
+}
+
+
+.project-thumb-box-items-7 {
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint (max-md){
+        height: 500px;
+    }
+
+    img {
+        @include imgw;
+        display: block;
+        object-fit: cover;
+    }
+
+    .content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        transition: opacity .35s ease, visibility .35s ease;
+
+        .title {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 15px 20px;
+            background: #fff;
+            max-width: 300px;
+
+            @include breakpoint (max-lg){
+                    font-size: 22px;
+                    font-weight: 500;
+                    padding: 15px 20px;
+                    max-width: 220px;
+            }
+        }
+
+        .title-2 {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 12px 15px;
+            background: #fff;
+            line-height: 1;
+        }
+    }
+
+    &:hover {
+        .content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.project-content-box-items-7 {
+    .title-text {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 111%;
+        max-width: 286px;
+        margin:  0 auto;
+        text-align: center;
+        text-decoration: underline;
+
+        &:hover {
+            color: $theme-color
+        }
+    }
+}
+
+
+.project-section-4 {
+
+    .project-top-area-4 {
+        @include flex;
+        justify-content: space-between;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $body-font;
+            max-width: 340px;
+            margin: 0 auto;
+            color: $header-color;
+
+            @include breakpoint (max-xl){
+               display: none;
+            }
+
+            &.style-2 {
+                text-align: right;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            h2 {
+                font-size: 184px;
+                font-weight: 700;
+
+                @include breakpoint (max-xxxl){
+                    font-size: 140px;
+                }
+
+                @include breakpoint (max-xxl){
+                    font-size: 100px;
+                }
+
+                @include breakpoint (max-sm){
+                    font-size: 70px;
+                }
+
+                @include breakpoint (max-xxs){
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}
+
+.project-thumb-box-4 {
+    .project-thumb {
+        max-width: 900px;
+        overflow: hidden;
+        position: relative;
+
+        @include breakpoint (max-xl){
+            max-width: initial;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img {
+            @include imgw;
+            object-fit: cover;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            object-fit: cover;
+            transition: all 1s;
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+
+        .title-2 {
+            font-weight: 550;
+            font-size: 50px;
+            line-height: 1;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+
+             @include breakpoint (max-xl){
+              font-size: 30px;
+            }
+
+            @include breakpoint (max-lg){
+              font-size: 24px;
+            }
+
+            a {
+                &:hover {
+                    color: $theme-color
+                }
+            }
+        }
+
+        .title-3 {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+
+             @include breakpoint (max-lg){
+              font-size: 24px;
+            }
+
+        }
+    }
+
+    &.style-2 {
+        max-width: 550px;
+
+         @include breakpoint (max-xl){
+            max-width: initial;
+        }
+    }
+
+    &.style-3 {
+        max-width: 750px;
+
+         @include breakpoint (max-xl){
+            max-width: initial;
+        }
+    }
+
+    &.style-3 {
+        max-width: 750px;
+
+         @include breakpoint (max-xl){
+            max-width: initial;
+        }
+    }
+
+    &.style-4 {
+        max-width: 770px;
+
+         @include breakpoint (max-xl){
+            max-width: initial;
+        }
+    }
+
+    &.style-5 {
+        max-width: 900px;
+        margin: 0 auto;
+
+        @include breakpoint (max-xl){
+            max-width: initial;
+        }
+
+        @include breakpoint (max-md){
+        
+            .project-thumb {
+                height: 450px;
+            }
+        }
+    }
+
+    &:hover {
+        .project-thumb {
+             &::after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.project-wrap-7 {
+    padding: 20px 0;
+    
+    .row {
+        padding: 0 20px;
+
+        @include breakpoint (max-sm){
+            padding: 0 7px;
+        }
+    }
+}
+
+.project-details-top-in {
+    padding-top: 180px !important;
+
+    .top-items {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 50px;
+
+        @include breakpoint (max-xl){
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .thumb {
+            img {
+                @include imgw;
+                border-radius: 20px;
+            }
+        }
+
+        .title {
+            font-size: 90px;
+            font-weight: 300;
+            max-width: 555px;
+
+            @include breakpoint (max-xxl){
+                font-size: 75px;
+            }
+
+            @include breakpoint (max-lg){
+                font-size: 68px;
+            }
+
+            @include breakpoint (max-md){
+                font-size: 52px;
+            }
+
+            @include breakpoint (max-sm){
+                font-size: 40px;
+            }
+        }
+    }
+
+    .project-items-in {
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        padding-top: 20px;
+
+        p {
+            font-size: 18px;
+        }
+
+        .title-2 {
+            font-size: 18px;
+            font-weight: 400;
+            font-family: $body-font;
+            margin-top: 8px;
+        }
+    }
+
+    .project-details-thumb-in {
+        margin-top: 100px;
+
+        @include breakpoint (max-xl){
+            margin-top: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.project-details-middle-in {
+    .title-3 {
+        font-size: 64px;
+        font-weight: 300;
+        font-family: $heading-font;
+
+        @include breakpoint (max-xl){
+            font-size: 52px;
+        }
+
+        @include breakpoint (max-md){
+            font-size: 45px;
+        }
+
+        @include breakpoint (max-sm){
+            font-size: 38px;
+        }
+    }
+
+    .content {
+        max-width: 825px;
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+
+            @include breakpoint (max-xl){
+                font-size: 16px;
+            }
+        }
+
+        .list {
+            margin-top: 35px;
+
+            li {
+                color: $header-color;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.project-details-thumb-in {
+    height: 100%;
+
+    .thumb {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img {
+            @include imgw;
+            object-fit: cover;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            object-fit: cover;
+            transition: all 1s;
+        }
+
+        &:hover {
+            &::after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.project-details-items-in {
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+    @include breakpoint (max-xl){
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .title-text {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 20px;
+        margin-top: 8px;
+        max-width: 530px;
+
+        @include breakpoint (max-xl){
+           font-size: 16px;
+        }
+    }
+}
+
+.pages-nav {
+    margin-top: 100px;
+    @include flex;
+    gap: 10px;
+    justify-content: center;
+
+    @include breakpoint (max-xl){
+        margin-top: 30px;
+    }
+
+    .left-arrow {
+        width: 170px;
+        height: 90px;
+        line-height: 90px;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        border-radius: 50px;
+        display: inline-block;
+        font-size: 20px;
+
+        img {
+            margin-right: 15px;
+        }
+    }
+
+    .right-arrow {
+        width: 170px;
+        height: 90px;
+        line-height: 90px;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        border-radius: 50px;
+        display: inline-block;
+        font-size: 20px;
+
+        img {
+            margin-left: 15px;
+        }
+    }
+}
+
+.project-section-8 {
+    .title {
+        font-family: 'ThunderFont', sans-serif !important;
+        font-weight: 700;
+        font-size: 555px;
+        color: $header-color;
+        text-transform: uppercase;
+        letter-spacing: initial;
+        text-align: center;
+        line-height: 1;
+
+        @include breakpoint (max-xl4){
+            font-size: 500px;
+        }
+
+        @include breakpoint (max-xxxl){
+            font-size: 400px;
+        }
+
+         @include breakpoint (max-xxl){
+            font-size: 300px;
+            margin-bottom: 50px;
+        }
+
+         @include breakpoint (max-lg){
+            font-size: 210px;
+        }
+
+         @include breakpoint (max-md){
+            font-size: 150px;
+            margin-bottom: 90px;
+        }
+
+         @include breakpoint (max-sm){
+            font-size: 110px;
+        }
+
+         @include breakpoint (max-xxs){
+            font-size: 80px;
+        }
+    }
+
+    .text-items {
+        @include flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        padding: 20px 0;
+        margin-top: -60px;
+        margin-bottom: 100px;
+        position: relative;
+        z-index: 11;
+
+        p,a {
+            font-size: 18px;
+            font-weight: 500;
+            color: $header-color;
+        }
+    }
+}
+
+.project-image-8 {
+    position: relative;
+    overflow: hidden;
+
+     @include breakpoint (max-xl){
+        height: 600px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease;
+        object-fit: cover;
+    }
+
+     .project-8 {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        right: 20px;
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: center;
+
+        // Default Hidden
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(calc(-50% + 40px));
+        transition: all 0.5s ease;
+        z-index: 2;
+
+        @include breakpoint (max-xxxl){
+            max-width: 500px;
+
+        }
+
+        @include breakpoint (max-xxl){
+            max-width: 300px;
+        }
+
+         @include breakpoint (max-md){
+            max-width: 400px;
+        }
+
+        .thumb {
+            transform: scale(.9);
+            transition: all 0.5s ease;
+
+            @include breakpoint (max-xxxl){
+               height: 300px;
+            }
+
+            img {
+                @include imgw;
+                 transition: all 0.5s ease;
+                     transition: all 0.5s ease;
+                     object-fit: cover;
+            }
+        }
+
+        .project-content {
+            @include flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: $white;
+            }
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: 'BDO Grotesk', sans-serif !important;
+            margin-bottom: 0;
+
+            a {
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+                color: $white;
+
+                &:hover {
+                    background-size: 100% 1.2px;
+                    background-image: linear-gradient(180deg, $white 0%, $white 100%);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+
+        .project-8 {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%);
+
+            .thumb {
+                transform: scale(1);
+            }
+
+           
+        }
+    }
+}
+
+.project-section-9 {
+    .section-title {
+        text-align: center;
+
+        h2 {
+            font-size: 310px;
+            font-weight: 400;
+            font-family: "ThunderFont" !important;
+            letter-spacing: initial;
+            line-height: 1;
+
+            @include breakpoint (max-xl4){
+                font-size: 220px;
+            }
+
+             @include breakpoint (max-sm){
+                font-size: 150px;
+                margin-bottom: 25px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            color: $header-color;
+            max-width: 390px;
+            margin: 0 auto;
+            margin-top: -40px;
+        }
+    }
+
+    .project-thumb-9 {
+        overflow: hidden;
+        border-radius: 20px;
+        margin-top: 100px;
+        display: block;
+        max-width: 685px;
+        margin-left: 100px;
+        position: relative;
+        z-index: 99;
+
+         @include breakpoint (max-xxl){
+           max-width: initial;
+           margin-left: 0;
+           margin-top: 40px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        &.style-2 {
+            max-width: 416px;
+            margin-left: auto;
+            margin-right: 100px;
+
+             @include breakpoint (max-xxl){
+                max-width: initial;
+                margin-left: 0;
+                margin-top: 40px;
+                margin-right: 0;
+            }
+        }
+
+        &.style-3 {
+            max-width: 1720px;
+            margin-left: 0;
+
+              @include breakpoint (max-xxl){
+                max-width: initial;
+                margin-left: 0;
+                margin-top: 40px;
+                margin-right: 0;
+            }
+        }
+
+        &.style-4 {
+            max-width: 416px;
+            margin-left: 100px;
+
+              @include breakpoint (max-xxl){
+                max-width: initial;
+                margin-left: 0;
+                margin-top: 40px;
+                margin-right: 0;
+            }
+        }
+
+        &.style-5 {
+            max-width: 685px;
+            margin-left: auto;
+            margin-right: 100px;
+
+              @include breakpoint (max-xxl){
+                max-width: initial;
+                margin-left: 0;
+                margin-top: 40px;
+                margin-right: 0;
+            }
+        }
+
+         &.style-6 {
+            max-width: 1295px;
+            margin-left: 0;
+            margin: 0 auto;
+            margin-top: 100px;
+
+              @include breakpoint (max-xxl){
+                max-width: initial;
+                margin-left: 0;
+                margin-top: 40px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.project-items-10 {
+    max-width: 750px;
+    margin-left: auto;
+    margin-top: 50px;
+    background: $white;
+
+    @include breakpoint (max-xl){
+        max-width: initial;
+    }
+
+    .thumb {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 20px;
+            object-fit: cover;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            object-fit: cover;
+            transition: all 1s;
+        }
+    }
+
+    .project-content {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+         @include breakpoint (max-md){
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .content {
+            
+            .title {
+                font-size: 22px;
+                margin-bottom: 5px;
+
+                a {
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            p {
+                color: #999999;
+            }
+        }
+
+        .project-btn {
+            background: #E6E6E6;
+            display: inline-block;
+            height: 45px;   
+            line-height: 45px;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: $header-color;
+            padding: 0 25px;
+            border-radius: 40px;
+
+            i {
+                margin-left: 5px;
+            }
+
+            &:hover {
+                background: $theme-color;
+                color: $white;
+            }
+        }
+    }
+
+    &:hover {
+         .thumb {
+             &:after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+            
+            img {
+                 transform: scale(1.2);
+            }
+         }   
+    }
+}

@@ -1,0 +1,113 @@
+.faq-items-style-1 {
+    margin-top: 55px;
+
+  .accordion-box {
+    position: relative;
+
+    .block {
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid rgba(17, 17, 17, .14);
+      border-radius: 50px;
+      margin-bottom: 30px;
+      line-height: 1;
+
+      @include breakpoint (max-lg){
+        border-radius: 10px !important;
+      }
+
+      .acc-btn {
+        position: relative;
+        font-size: 20px;
+        color: $header-color;
+        font-weight: 500;
+        font-family: $body-font;
+        cursor: pointer;
+        transition: all 500ms ease;
+        @include flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        padding-right: 14px;
+        gap: 14px;
+
+        @include breakpoint(max-xxl) {
+          line-height: 1.4;
+        }
+
+        @include breakpoint(max-xxs) {
+          font-size: 16px;
+        }
+
+        .icon {
+          max-width: 39px;
+          transition: all 500ms ease;
+          border-radius: 50%;
+          color: $header-color;
+          text-align: center;
+          width: 100%;
+
+          &:before {
+            content: "\f067"; 
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 900;
+            color: $header-color;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+
+      .acc-content {
+        position: relative;
+        display: none;
+        padding: 30px 30px;
+        padding-top: 22px;
+
+         @include breakpoint(max-xxs) {
+          padding: 18px 20px;
+        }
+
+        .content {
+          position: relative;
+
+          .text {
+            line-height: 175%;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(85, 85, 85, 1);
+
+            @include breakpoint(max-xl) {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      // Active block styles
+      &.active-block {
+        border: none;
+        .acc-btn {
+          background-color: #F1F1F1;
+          border-radius: 50px;
+          
+           @include breakpoint (max-lg){
+        border-radius: 10px !important;
+      }
+
+          .icon:before {
+            content: "\f068"; // minus icon when active
+            color: $header-color;
+          }
+        }
+      }
+    }
+
+    // Show content if marked current
+    .block .acc-content.current {
+      display: block;
+    }
+
+    .block:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

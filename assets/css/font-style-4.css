@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "ThunderFont";
+	src: url("../../assets/webfonts/Thunder-LC.ttf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+    --theme: #c23788;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'ThunderFont', sans-serif !important;
+}
+
+.container {
+	max-width: 1620px;
+}

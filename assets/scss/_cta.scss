@@ -1,0 +1,247 @@
+.cta-banner-section {
+    margin-top: 104px;
+    position: relative;
+    margin-bottom: 60px;
+
+    .cta-thumb {
+        height: 890px;
+        position: relative;
+
+        @include breakpoint (max-xxxl){
+            height: 700px;
+        }
+
+        img {
+            @include imgw;
+            object-fit: cover;
+        }
+    }
+
+    .content-box {
+        background-color: $white;
+        position: absolute;
+        bottom: -60px;
+        right: 150px;
+        max-width: 550px;
+
+        @include breakpoint (max-xxxl){
+            right: 40px;
+        }
+
+        @include breakpoint (max-lg){
+            left: 20px;
+            right: 20px;
+        }
+
+        .content {
+            padding: 55px 40px;
+
+            @include breakpoint (max-lg){
+                padding: 30px;
+            }
+
+            .video-box-items {
+                @include flex;
+                gap: 15px;
+                margin-bottom: 75px;
+
+                 @include breakpoint (max-lg){
+                    margin-bottom: 30px;
+                    flex-wrap: wrap;
+                }
+
+                .video-btn {
+                    display: inline-block;
+                    width: 65px;
+                    height: 65px;
+                    line-height: 65px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: $header-color;
+                    color: $white;
+                    transition: all .4s ease-in-out;
+
+                    &:hover {
+                        background-color: $theme-color;
+                    }
+                }
+
+                span {
+                    text-transform: capitalize;
+                    color: $header-color;
+                    max-width: 270px;
+                }
+            }
+
+            .title {
+                font-size: 30px;
+                line-height: 135%;
+                margin-bottom: 25px;
+
+                 @include breakpoint (max-sm){
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .service-btn {
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            width: 100%;
+            text-align: center;
+            padding: 0 20px;
+            background-color: $theme-color;
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            i {
+                margin-left: 5px;
+            }
+
+            &:hover {
+                background-color: $header-color;
+            }
+        }
+    }
+}
+
+.banner-section-three {
+    .banner-image-3 {
+        height: 950px;
+
+        @include breakpoint (max-xxxl){
+            height: 850px;
+        }
+
+        @include breakpoint (max-xl){
+            height: 680px;
+        }
+
+        @include breakpoint (max-lg){
+            height: 600px;
+        }
+
+        @include breakpoint (max-md){
+            height: 550px;
+        }
+
+        @include breakpoint (max-sm){
+            height: 450px;
+        }
+        
+        img {
+            @include imgw;
+            object-fit: cover;
+        }
+    }
+}
+
+.cta-section-4 {
+    position: relative;
+
+     @include breakpoint (max-xxl){
+      padding-top: 0 !important;
+    }
+
+    .cta-left-shape {
+        position: absolute;
+        top: -150px;
+        left: 0;
+
+        @include breakpoint (max-xxxl){
+            max-width: 600px;
+            top: -60px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .cta-right-shape {
+        position: absolute;
+        top: -150px;
+        right: 0;
+
+        @include breakpoint (max-xxxl){
+            max-width: 500px;
+            top: -60px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .cta-content-4 {
+        text-align: center;
+
+        .title {
+            font-size: 100px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+            max-width: 476px;
+            margin: 0 auto;
+
+            @include breakpoint (max-sm){
+                font-size: 60px;
+            }
+        }
+
+        .theme-btn-main-2 {
+            background: transparent;
+            margin-top: 40px;
+        }
+    }
+}
+
+
+.cta-inner-wrapper {
+    .cta-inner-image {
+        height: 100%;
+        
+        img {
+            @include imgw;
+            object-fit: cover;
+        }
+    }
+
+    .cta-inner-content {
+        background: #F1F1F1;
+        padding: 100px 50px;
+
+        @include breakpoint (max-lg){
+            padding: 50px 30px;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: 400;
+            max-width: 336px;
+            line-height: 135%;
+            margin-bottom: 270px;
+
+            @include breakpoint (max-lg){
+               margin-bottom: 20px;
+               font-size: 24px;
+            }
+        }
+
+        .text {
+            margin-bottom: 50px;
+        }
+    }
+}

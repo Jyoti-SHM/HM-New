@@ -1,0 +1,248 @@
+//>>>>> Component Button Here <<<<<//
+.theme-btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  transition: all 0.4s ease;
+  text-transform: capitalize;
+
+  &.style-2 {
+
+    .theme-btn-arrow-left,
+    .theme-btn-arrow-right {
+      height: 46px;
+      line-height: 46px;
+      width: 46px;
+      background: transparent;
+      border-radius: 50%;
+      color: #000;
+      border: 1px solid rgba(17, 17, 17, 0.1);
+
+      img {
+        animation: cir36 10s linear infinite;
+      }
+    }
+
+    .theme-btn {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    &:hover {
+      padding-right: 25px;
+      padding-left: 7px;
+
+      .theme-btn {
+        background-color: transparent;
+      }
+
+      .theme-btn-arrow-left {
+        left: 7px;
+      }
+    }
+  }
+
+
+  .theme-btn-arrow-left,
+  .theme-btn-arrow-right {
+    width: 43px;
+    height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $theme-color;
+    border-radius: 50%;
+    transition: 0.4s;
+    text-align: center;
+
+    i {
+      font-weight: 400;
+    }
+  }
+
+  .theme-btn-arrow-left {
+    scale: 0;
+    position: absolute;
+    left: 7px;
+  }
+
+  .theme-btn {
+    background: $theme-color;
+    color: $header-color;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    transition: 0.4s;
+
+    @include breakpoint(max-sm) {
+      font-size: 14px;
+    }
+
+    .btn-text1 {
+      border: 1px solid rgba(17, 17, 17, 0.1);
+      border-radius: 100px;
+      height: 46px;
+      line-height: 46px;
+      padding: 0 24px;
+    }
+    .btn-text2 {
+      background-color: $theme-color;
+      border-radius: 100px;
+      height: 46px;
+      line-height: 46px;
+      padding: 0 24px;
+      color: $white;
+    }
+  }
+
+  &:hover {
+    .theme-btn-arrow-left {
+      scale: 1;
+
+      img {
+        animation: cir36 10s linear infinite;
+      }
+    }
+
+    .theme-btn-arrow-right {
+      scale: 0;
+
+      img {
+        animation: cir36 10s linear infinite;
+      }
+    }
+
+    .theme-btn {
+      transform: translateX(47px);
+      background-color: $header-color;
+    }
+  }
+}
+
+.theme-btn-main-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  transition: all 0.4s ease;
+  text-transform: capitalize;
+  border-radius: 10px;
+
+  &.style-2 {
+  
+    .theme-btn {
+      background-color: transparent;
+      padding: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      background: $header-color;
+      border-radius: 10px;
+      height: 46px;
+      line-height: 46px;
+      padding: 0 24px;
+    }
+
+    &:hover {
+      padding-right: 25px;
+      padding-left: 7px;
+    }
+  }
+
+
+  .theme-btn-arrow-left,
+  .theme-btn-arrow-right {
+    height: 46px;
+    line-height: 46px;
+    width: 46px;
+    text-align: center;
+    color: #fff;
+    background: #111111;
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+
+  .theme-btn-arrow-left {
+    scale: 0;
+    position: absolute;
+    left: 0;
+  }
+
+  .theme-btn {
+    transition: 0.4s;
+  }
+
+  &:hover {
+    .theme-btn-arrow-left {
+      scale: 1;
+
+      img {
+        animation: cir36 10s linear infinite;
+      }
+    }
+
+    .theme-btn-arrow-right {
+      scale: 0;
+
+      img {
+        animation: cir36 10s linear infinite;
+      }
+    }
+
+    .theme-btn {
+      transform: translateX(39px);
+    }
+  }
+
+  &.style-4 {
+    .theme-btn {
+      background: transparent;
+      border: 1px solid #111111;
+      color: #111111;
+      border-radius: 100px;
+    }
+
+    .theme-btn-arrow-left,.theme-btn-arrow-right {
+      background: transparent;
+      border: 1px solid #111111;
+      color: #111111;
+      border-radius: 100px;
+    }
+  }
+}
+
+//>>>>> Component Button End <<<<<//
+
+
+@keyframes slideRight {
+    49% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    51% {
+      opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    49% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    51% {
+      opacity: 1;
+    }
+}

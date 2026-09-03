@@ -1,0 +1,533 @@
+//page scroll bar add
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FBF3E6; 
+	border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $theme-color;
+	border-radius: 0;
+}
+//page scroll bar add
+
+
+// .array-button {
+//     display: flex;
+//     align-items: center;
+//     gap: 15px;
+//     z-index: 999;
+
+//     .array-prev,.array-next {
+//         border-radius: 100px;
+//         border: 1px solid #E6E8EB;
+//         width: 54px;
+//         height: 54px;
+//         line-height: 54px;
+//         text-align: center;
+//         border-radius: 50%;
+//         color: $header-color;
+//         @include transition;
+//         cursor: pointer;
+        
+
+//         &:hover {
+//             background-color: $theme-color;
+//             color: $white;
+//         }
+//     }
+// }
+
+//pagination default
+
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+.ralt{
+ position: relative;
+}
+
+.sticky-style {
+  position: sticky !important;
+  top: 100px;
+}
+
+.gt-slide-transtion {
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+.gt-brand-slide-element {
+	width: auto;
+	display: inline-block;
+}
+
+.p-relative {
+  position: relative;
+}
+
+
+
+/* ================================
+   Split Text Styles
+================================ */
+
+
+.split-title .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* char animation */
+.split-title .char {
+  display: inline-block;
+  transform-origin: left center;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+}
+
+.body-bg-2 {
+  background-color: #FFFCF8;
+}
+
+.array-buttons {
+  @include flex;
+  gap: 8px;
+
+  .array-prev,.array-next {
+    @include transition;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+.page-nav-wrap {
+    margin-top: 50px;
+
+    ul {
+        li {
+            display: inline-block;
+
+            &.active {
+
+                .page-numbers {
+                    background-color: $theme-color;
+                    color: $header-color;
+                }
+            }
+
+            .page-numbers {
+                &.current {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                text-align: center;
+                line-height: 48px;
+                border-radius: 0;
+                background: $bg-color;
+                color: $white;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                margin: 0 2px;
+                border-radius: 50%;
+                font-family: $heading-font;
+
+                @media (max-width: 767px) {
+                    margin-top: 10px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 14px;
+                }
+
+                i {
+                    margin-top: 2px;
+                    color: $white;
+                    @include transition;
+                }
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $header-color;
+
+                    i {
+                        color: $header-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.z-index-1{
+	position: relative;
+	z-index: 1;
+}
+
+br {
+  @include breakpoint (max-lg){
+    display: none;
+  }
+}
+
+.swiper-dot {
+  position: relative;
+  .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      transition: 0.6s;
+      background-color: #03070D;
+      opacity: 1;
+      border-radius: 8px;
+      &:not(:last-child){
+      margin-right: 5px;
+      }
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: $theme-color;
+      transition: 0.6s;
+      position: relative;
+  }
+
+}
+
+.jump-anim,
+.studio-text {
+  display: inline-block;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.tp-clip-anim {
+  position: relative;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+    opacity: 0;
+    animation: reveal 1s forwards;
+  }
+
+  // delay for each slice
+  @for $i from 1 through 9 {
+    .mask-#{$i} {
+      clip-path: inset(0 #{(9 - $i) * 11.1%} 0 #{($i - 1) * 11.1%});
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tp-clip-anim {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    position: relative;
+    & .tp-anim-img {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    & .mask {
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.005);
+    }
+    >* {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+}
+
+.container-1680 {
+  max-width: 1680px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.image-distortion{
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    &  canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.text_invert > div {
+  background-image: linear-gradient(to right, rgb(137, 137, 137) 50%, rgb(137, 137, 137) 50%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.text_invert-2 > div {
+  background-image: linear-gradient(to right, rgb(17, 17, 17) 50%, rgb(137, 137, 137) 50%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.clip-animation {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.clip-animation .clip-animation-img {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.clip-animation > * {
+    grid-area: 1/1/2/2;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.container-2 {
+  max-width: 1520px;
+}
+
+// .section-spacing-top {
+//     padding-top: 100px;
+// }
+
+// .section-spacing-top-200 {
+//   padding-top: 200px;
+
+// }
+
+.wt-about-title {
+    display: inline-block;
+}
+
+.wt-about-title .char {
+    display: inline-block;
+    background: linear-gradient(0deg, rgba(17, 17, 17, 0.7) 0%, #FFFFFF 238.31%);
+    will-change: transform;
+}
+
+.container-7 {
+  max-width: 1290px;
+}
+
+.sec-line-add {
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.15);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  .sec-line-wrap {
+    position: relative;
+    @include flex;
+    justify-content: space-between;
+
+    .one-line {
+      width: 15px;
+      height: 1px;
+      background: #111111;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 15px;
+        content: "";
+         background: #111111;
+      }
+
+      &.one {
+        margin-left: -18px;
+      }
+
+      &.three {
+        margin-right: -19px;
+      }
+    }
+  }
+}
+
+//Line custom animation
+.line-shape-animation {
+	max-width: 1290px;
+	height: 100vh;
+	position: fixed;
+	left: 50%;
+	top: -20px;
+	justify-content: space-between;
+	margin: 0 auto;
+	transform: translateX(-50%);
+  z-index: -1;
+
+  @include breakpoint (max-xxl){
+    display: none !important;
+  }
+}
+.line-shape-animation span {
+	position: relative;
+	width: 1px;
+	height: 100%;
+	display: block;
+	background: rgba(17, 17, 17, 0.15);
+}
+.line-shape-animation span::before,
+.line-shape-animation span::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	background: $header-color;
+	box-shadow: rgba(17, 17, 17, 0.15) 0px 8px 24px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	clip-path: polygon(
+		51% 8%,
+		68% 15%,
+		66% 40%,
+		60% 78%,
+		56% 100%,
+		46% 100%,
+		42% 84%,
+		38% 56%,
+		34% 17%
+	);
+}
+.line-shape-animation span::after {
+	animation: dscroll 2s linear infinite;
+	width: 2px;
+	height: 24px;
+	bottom: 0;
+	left: 0;
+	background: $header-color;
+	box-shadow: rgba(17, 17, 17, 0.15) 0px 8px 24px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	clip-path: polygon(
+		51% 8%,
+		68% 15%,
+		66% 40%,
+		60% 78%,
+		56% 100%,
+		46% 100%,
+		42% 84%,
+		38% 56%,
+		34% 17%
+	);
+}
+.line-shape-animation span:nth-child(2)::after {
+	animation: dscroll 2.1s linear infinite;
+}
+.line-shape-animation span:nth-child(3)::after {
+	animation: dscroll 2.2s linear infinite;
+}
+.line-shape-animation span:nth-child(4)::after {
+	animation: dscroll 2.3s linear infinite;
+}
+.line-shape-animation span:nth-child(5)::after {
+	animation: dscroll 2.4s linear infinite;
+}
+.line-shape-animation span:nth-child(6)::after {
+	animation: dscroll 1s linear infinite;
+}
+.line-shape-animation span:nth-child(7)::after {
+	animation: dscroll 3.5s linear infinite;
+}
+
+.line-shape-animation span:nth-child(2)::backdrop {
+	animation: dscroll 4.1s linear infinite;
+}
+.line-shape-animation span:nth-child(3)::before {
+	animation: dscroll 4.2s linear infinite;
+}
+.line-shape-animation span:nth-child(4)::before {
+	animation: dscroll 4.3s linear infinite;
+}
+.line-shape-animation span:nth-child(5)::before {
+	animation: dscroll 4.4s linear infinite;
+}
+.line-shape-animation span:nth-child(6)::before {
+	animation: dscroll 4s linear infinite;
+}
+.line-shape-animation span:nth-child(7)::before {
+	animation: dscroll 4.5s linear infinite;
+}
+//Line custom animation
+@keyframes dscroll {
+	100% {
+		transform: translateY(100vh);
+	}
+}
+
+.p-relative {
+	position: relative !important;
+}
+
+.style-text-theme-color {
+  color: #c23788 !important;
+  text-transform: uppercase;
+}
+
+.page-wrapper-3 {
+  padding: 20px;
+}

@@ -1,0 +1,50 @@
+.logo-slider {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(200px * 20); /* 20 logos total */
+  animation: scroll 20s linear infinite;
+}
+
+.logo-track img {
+  width: 150px;
+  height: auto;
+  margin: 0 25px;
+  /* filter: grayscale(100%); */
+  transition: 0.3s;
+}
+
+.logo-track img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-track img {
+    width: 100px;
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-track img {
+    width: 80px;
+    margin: 0 10px;
+  }
+}
